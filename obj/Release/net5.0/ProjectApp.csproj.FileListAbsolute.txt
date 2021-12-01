@@ -108,3 +108,4 @@ C:\Users\deand\Documents\OCBC-BATCH2-CSHARP (Di luar root GitHub Repo)\ProjectAp
 C:\Users\deand\Documents\OCBC-BATCH2-CSHARP (Di luar root GitHub Repo)\ProjectApp\ProjectApp\obj\Release\net5.0\ProjectApp.pdb
 C:\Users\deand\Documents\OCBC-BATCH2-CSHARP (Di luar root GitHub Repo)\ProjectApp\ProjectApp\obj\Release\net5.0\ProjectApp.genruntimeconfig.cache
 C:\Users\deand\Documents\OCBC-BATCH2-CSHARP (Di luar root GitHub Repo)\ProjectApp\ProjectApp\bin\Release\net5.0\MySql.EntityFrameworkCore.dll
+C:\Users\deand\Documents\OCBC-BATCH2-CSHARP (Di luar root GitHub Repo)\ProjectApp\ProjectApp\bin\Release\net5.0\Project1.postman_collection.json

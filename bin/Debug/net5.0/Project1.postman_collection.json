@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "ce0fa4f2-d776-479c-9655-8096b1f0ac67",
+		"name": "Project1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register - Project1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"dean3@bootcamp.com\",\r\n  \"email\": \"dean3@bootcamp.com\",\r\n  \"password\": \"Passw0rd1@1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://final-projects-1-dean.herokuapp.com/api/authmanagement/register",
+					"protocol": "https",
+					"host": [
+						"final-projects-1-dean",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"authmanagement",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login - Project1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"dean3@bootcamp.com\",\r\n  \"password\": \"Passw0rd1@1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://final-projects-1-dean.herokuapp.com/api/authmanagement/login",
+					"protocol": "https",
+					"host": [
+						"final-projects-1-dean",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"authmanagement",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Using Token - Project1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXltZW50RGV0YWlsSWQiOiIyZTg5YWUxMi01ZWRhLTRkNjYtYWMxZS05MTA5NmZkY2JjYmQiLCJlbWFpbCI6ImRlYW5AYm9vdGNhbXAuY29tIiwic3ViIjoiZGVhbkBib290Y2FtcC5jb20iLCJqdGkiOiJjNjhhYzhmZC0xNWE5LTQ0YTktYmU2Ni1mYjg5OWU3Yjc5YzYiLCJuYmYiOjE2MzgzMjI2MTAsImV4cCI6MTYzODMyNDQxMCwiaWF0IjoxNjM4MzIyNjEwfQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/project",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All - Project1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXltZW50RGV0YWlsSWQiOiIwOTNiOGRkMi1iYzIzLTQxOWItODU3NC0xYTZkNzRlOTFhY2YiLCJlbWFpbCI6ImRlYW4zQGJvb3RjYW1wLmNvbSIsInN1YiI6ImRlYW4zQGJvb3RjYW1wLmNvbSIsImp0aSI6IjY2Y2YxY2MwLTFhMWUtNDVjNi1iZThjLWZiZTU4NTkyMjg0NCIsIm5iZiI6MTYzODM0MzM5MCwiZXhwIjoxNjM4MzQ1MTkwLCJpYXQiOjE2MzgzNDMzOTB9.o1oKohnp2grNrXTofOKfUFZJNYbxMD8circ1Pl95fFA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://final-projects-1-dean.herokuapp.com/api/project",
+					"protocol": "https",
+					"host": [
+						"final-projects-1-dean",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post - Project1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXltZW50RGV0YWlsSWQiOiIwOTNiOGRkMi1iYzIzLTQxOWItODU3NC0xYTZkNzRlOTFhY2YiLCJlbWFpbCI6ImRlYW4zQGJvb3RjYW1wLmNvbSIsInN1YiI6ImRlYW4zQGJvb3RjYW1wLmNvbSIsImp0aSI6ImM2NGRiMzAxLTcxZGQtNDliYi05YTIyLTVmNmI5YWU5MWJlZSIsIm5iZiI6MTYzODM0MzQ2MiwiZXhwIjoxNjM4MzQ1MjYyLCJpYXQiOjE2MzgzNDM0NjJ9.ywEZAjyzpJ8JdInTEdqyFD9bekVZ54J_vB_yjzXJBxk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cardOwnerName\": \"Dean4\",\r\n  \"cardNumber\": \"card0003\",\r\n  \"expirationDate\": \"01-03-2024\",\r\n  \"securityCode\": \"secu0003\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://final-projects-1-dean.herokuapp.com/api/project",
+					"protocol": "https",
+					"host": [
+						"final-projects-1-dean",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by Id - Project1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXltZW50RGV0YWlsSWQiOiIwOTNiOGRkMi1iYzIzLTQxOWItODU3NC0xYTZkNzRlOTFhY2YiLCJlbWFpbCI6ImRlYW4zQGJvb3RjYW1wLmNvbSIsInN1YiI6ImRlYW4zQGJvb3RjYW1wLmNvbSIsImp0aSI6IjY2Y2YxY2MwLTFhMWUtNDVjNi1iZThjLWZiZTU4NTkyMjg0NCIsIm5iZiI6MTYzODM0MzM5MCwiZXhwIjoxNjM4MzQ1MTkwLCJpYXQiOjE2MzgzNDMzOTB9.o1oKohnp2grNrXTofOKfUFZJNYbxMD8circ1Pl95fFA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://final-projects-1-dean.herokuapp.com/api/project/5",
+					"protocol": "https",
+					"host": [
+						"final-projects-1-dean",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"project",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put - Project1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXltZW50RGV0YWlsSWQiOiIwOTNiOGRkMi1iYzIzLTQxOWItODU3NC0xYTZkNzRlOTFhY2YiLCJlbWFpbCI6ImRlYW4zQGJvb3RjYW1wLmNvbSIsInN1YiI6ImRlYW4zQGJvb3RjYW1wLmNvbSIsImp0aSI6IjY2Y2YxY2MwLTFhMWUtNDVjNi1iZThjLWZiZTU4NTkyMjg0NCIsIm5iZiI6MTYzODM0MzM5MCwiZXhwIjoxNjM4MzQ1MTkwLCJpYXQiOjE2MzgzNDMzOTB9.o1oKohnp2grNrXTofOKfUFZJNYbxMD8circ1Pl95fFA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"paymentDetailId\": 5,\r\n  \"cardOwnerName\": \"Dean5 EDITED\",\r\n  \"cardNumber\": \"card0002 EDITED\",\r\n  \"expirationDate\": \"15-02-2024\",\r\n  \"securityCode\": \"secu0002 EDITED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://final-projects-1-dean.herokuapp.com/api/project/5",
+					"protocol": "https",
+					"host": [
+						"final-projects-1-dean",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"project",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
