@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjectApp.Data;
 using ProjectApp.Models;
+using System;
 
 namespace ProjectApp.Controllers
 {
@@ -42,11 +43,13 @@ namespace ProjectApp.Controllers
             {
                 await _context.Items.AddAsync(data);
                 await _context.SaveChangesAsync();
-
+                System.Console.WriteLine("Data berhasil dibuat.");
                 return CreatedAtAction("GetItem", new { data.paymentDetailId }, data);
             }
-
-            return new JsonResult("Something went wrong") { StatusCode = 500 };
+            else{
+                return new JsonResult("Something went wrong") { StatusCode = 500 };
+            }
+            
         }
 
         [HttpGet("{id}", Name="Get Data Where")]
@@ -82,7 +85,7 @@ namespace ProjectApp.Controllers
 
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(item);
         }
 
         [HttpDelete("{id}", Name="Delete Data")]
