@@ -8,10 +8,13 @@ EXPOSE 48719
 EXPOSE 27017
 EXPOSE 5000
 EXPOSE 5001
+EXPOSE 44319
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY . .
+
+#ENV ASPNETCORE_ENVIRONMENT=Development
 
 #COPY ["ProjectApp/ProjectApp.csproj", "ProjectApp/"]
 #RUN dotnet restore "ProjectApp/ProjectApp.csproj"
