@@ -30,30 +30,28 @@ namespace ProjectApp.Controllers
         }
 
         [HttpGet(Name = "Get All")]
-        public async Task<ActionResult> GetItems()
+        public async Task<IActionResult> GetItems()
         {
             var items = await _context.Items.ToListAsync();
             return Ok(items);
         }
 
         [HttpPost(Name = "Create Data")]
-        public async Task<ActionResult> CreateItem(ItemData data)
+        public async Task<IActionResult> CreateItem(ItemData data)
         {
             if (ModelState.IsValid)
             {
                 await _context.Items.AddAsync(data);
                 await _context.SaveChangesAsync();
-                System.Console.WriteLine("Data berhasil dibuat.");
+                
                 return CreatedAtAction("GetItem", new { data.paymentDetailId }, data);
             }
-            else{
-                return new JsonResult("Something went wrong") { StatusCode = 500 };
-            }
             
+            return new JsonResult("Something went wrong") { StatusCode = 500 };
         }
 
         [HttpGet("{id}", Name="Get Data Where")]
-        public async Task<ActionResult> GetItem(int id)
+        public async Task<IActionResult> GetItem(int id)
         {
             var item = await _context.Items.FirstOrDefaultAsync(x => x.paymentDetailId == id);
             if (item == null)
@@ -64,7 +62,7 @@ namespace ProjectApp.Controllers
         }
 
         [HttpPut("{id}",Name="Update Data")]
-        public async Task<ActionResult> UpdateItem(int id, ItemData item)
+        public async Task<IActionResult> UpdateItem(int id, ItemData item)
         {
             if (id != item.paymentDetailId)
             {
@@ -89,7 +87,7 @@ namespace ProjectApp.Controllers
         }
 
         [HttpDelete("{id}", Name="Delete Data")]
-        public async Task<ActionResult> DeleteItem(int id)
+        public async Task<IActionResult> DeleteItem(int id)
         {
             var existItem = await _context.Items.FirstOrDefaultAsync(x => x.paymentDetailId == id);
 
