@@ -1,0 +1,11 @@
+1. Authmanagementcontroller yang ditambahkan generate token
+2. Kueri untuk update dan delete
+
+Nama a = nama b
+Delete nama b
+
+Update namatabel set nama="b" where nama="a"
+Delete from namatabel where nama="b"
+
+3. Nambahin package sqlite
+dotnet add package microsoft.entityframeworkcore.sqlite --version 5.0.11

@@ -115,7 +115,10 @@ namespace ProjectApp
             
             app.UseAuthentication();
 
-            app.UseCors(MyAllowSpecificOrigins);
+            app.UseCors(x=>x
+            .AllowAnyHeader()
+            .AllowAnyOrigin()
+            .AllowAnyMethod());
 
             app.UseEndpoints(endpoints =>
             {
